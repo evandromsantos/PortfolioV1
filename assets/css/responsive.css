@@ -1,0 +1,270 @@
+@media (max-width: 980px) {
+    .nav-bar {
+        flex-direction: row-reverse;
+        width: 0;
+    }
+
+    .menu {
+        visibility: hidden;
+        position: absolute;
+        display: block;
+        top: 10rem;
+        background-color: var(--color-black-transparent-menu);
+        transition: .2s;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .menu-2 {
+        top: 7rem;
+    }
+
+    .menu li {
+        width: 100%;
+        display: flex;
+        text-align: center;
+    }
+
+    .link-menu {
+        width: 100%;
+        padding: 1.5rem;
+        color: var(--color-orange-html);
+    }
+
+    #btn-mobile {
+        display: flex;
+        width: 4rem;
+        height: 3rem;
+        background: none;
+        border: none;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        right: 3rem;
+    }
+
+    .animated-icon {
+        width: 3rem;
+        height: 2rem;
+        position: relative;
+        transform: rotate(0deg);
+        transition: .5s ease-in-out;
+        cursor: pointer;
+    }
+
+    .animated-icon .btn-hamburger {
+        display: block;
+        position: absolute;
+        height: .3rem;
+        width: 100%;
+        border-radius: .9rem;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: .50s;
+    }
+
+    .animated-icon .btn-hamburger {
+        background: var(--color-orange-html);
+    }
+
+    .animated-icon .btn-hamburger:nth-child(1) {
+        top: 0;
+    }
+
+    .animated-icon .btn-hamburger:nth-child(2),
+    .animated-icon .btn-hamburger:nth-child(3) {
+        top: 1rem;
+    }
+
+    .animated-icon .btn-hamburger:nth-child(4) {
+        top: 2rem;
+    }
+
+    .animated-icon.open .btn-hamburger:nth-child(1) {
+        top: 1.1rem;
+        width: 0%;
+        left: 50%;
+        opacity: 0;
+    }
+
+    .animated-icon.open .btn-hamburger:nth-child(2) {
+        transform: rotate(45deg);
+        background: var(--color-blue-light);
+    }
+
+    .animated-icon.open .btn-hamburger:nth-child(3) {
+        transform: rotate(-45deg);
+        background: var(--color-blue-light);
+    }
+
+    .animated-icon.open .btn-hamburger:nth-child(4) {
+        top: 1.1rem;
+        width: 0;
+        left: 50%;
+        opacity: 0;
+    }
+
+    .open .menu {
+        visibility: visible;
+        height: 50vh;
+    }
+
+    .div-contact::after {
+        font-size: 14rem;
+    }
+
+    .talk-to-me {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 820px) {
+    .ola {
+        font-size: 5rem;
+    }
+
+    .my-photo {
+        display: none;
+    }
+
+    .text-about {
+        width: 80%;
+    }
+
+    .div-contact::after {
+        font-size: 11rem;
+        top: 8rem;
+    }
+
+    .talk-to-me {
+        margin-top: 13rem;
+    }
+
+    .div-form {
+        margin-top: 3rem;
+    }
+}
+
+@media (max-width: 680px) {
+    .name {
+        font-size: 2rem;
+    }
+
+    .ola {
+        font-size: 4rem;
+    }
+
+    .title-about,
+    .title-prejects,
+    .title-skill {
+        font-size: 3rem;
+    }
+
+    .div-contact::after {
+        font-size: 8rem;
+    }
+}
+
+@media (max-width: 470px) {
+    .ola {
+        font-size: 4rem;
+    }
+
+    .title-skill {
+        margin-top: 8rem;
+    }
+
+    .my-projects {
+        width: 100%;
+    }
+
+    .project {
+        width: 100%;
+        height: 20rem;
+    }
+
+    .project p {
+        width: 100%;
+        left: 0;
+    }
+
+    .div-contact::after {
+        font-size: 7rem;
+    }
+}
+
+@media (max-width: 411px) {
+    .ola {
+        font-size: 3rem;
+    }
+
+    .talk-to-me {
+        box-shadow: none;
+        margin-top: 9rem;
+    }
+
+    .talk-to-me .title-contact {
+        font-size: 2.5rem;
+        border: none;
+    }
+
+    .div-form {
+        box-shadow: none;
+    }
+
+    .div-form .title-form {
+        font-size: 2.5rem;
+        border: none;
+    }
+
+    .form {
+        width: 100%;
+        padding: 1rem;
+        margin-top: .5rem;
+        align-items: center;
+    }
+
+    .form input,
+    .form textarea {
+        width: 100%;
+    }
+
+    .div-contact::after {
+        font-size: 5rem;
+    }
+
+    .btn-submit {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 370px) {
+
+    .name {
+        margin-left: 1rem;
+    }
+
+    .ola {
+        font-size: 2.5rem;
+    }
+
+    #btn-mobile {
+        right: 1rem;
+    }
+
+    .social-networks {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 290px) {
+    .div-contact::after {
+        font-size: 3rem;
+    }
+
+    .talk-to-me .title-contact,
+    .div-form .title-form {
+        font-size: 2rem;
+    }
+}

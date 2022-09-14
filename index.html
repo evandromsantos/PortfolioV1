@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <title>Portfólio</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="cabecalho">
+            <div class="logo">
+                <a class="name" href="#">Evandro Macedo</a>
+            </div>
+            <nav class="nav-bar">
+                <button id="btn-mobile" aria-label="Abrir menu" aria-haspopup="true" aria-controls="menu"
+                    aria-expanded="false">
+                    <div class="animated-icon">
+                        <span class="btn-hamburger"></span>
+                        <span class="btn-hamburger"></span>
+                        <span class="btn-hamburger"></span>
+                        <span class="btn-hamburger"></span>
+                    </div>
+                </button>
+                <ul class="menu" role="menu">
+                    <li><a class="link-menu" href="#about">Sobre</a></li>
+                    <li><a class="link-menu" href="#skill">Habilidades</a></li>
+                    <li><a class="link-menu" href="#projects">Projetos</a></li>
+                    <li><a class="link-menu" href="https://github.com/evandromsantos" target="_blank">GitHub</a></li>
+                    <li><a class="link-menu" href="#contact">Contatos</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="home-page">
+                <h2 class="ola">Olá, seja bem vindo(a).</h2>
+            </section>
+
+            <section id="about" class="bg-dark">
+                <h2 class="title-about init-hidden">Um pouco sobre mim</h2>
+                <div class="about-me">
+                    <div class="my-photo init-hidden">
+                        <div class="photo"></div>
+                    </div>
+                    <div class="text-about box-right">
+                        <p class="text init-hidden">Sou Evandro Macedo, Trabalhei 7 anos e 4 meses em lojas de calçados nos cargos de
+                            estoquista e vendedor, mas sempre quis ir para área de tecnologia, desde criança sempre
+                            gostei muito de mexer na internet, com 12 anos criava blogs de downloads e de jogos que eu
+                            jogava na época, mas por alguns acontecimentos acabei me distanciando das coisas que mais
+                            gostava de fazer, então em 2019 tive a oportunidade de começar o curso de análise e
+                            desenvolvimento de sistemas e me formar no final de 2021, agora quero conseguir meu primeiro
+                            emprego na área de desenvolvedor web.
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="skill" class="bg-clear">
+                <h2 class="title-skill init-hidden">Conhecimentos</h2>
+                <div class="my-skills">
+                    <div class="skill init-hidden">
+                        <img src="assets/img/logo-html.png" alt="html">
+                    </div>
+                    <div class="skill init-hidden">
+                        <img src="assets/img/logo-css.png" alt="css">
+                    </div>
+                    <div class="skill init-hidden">
+                        <img src="assets/img/js.jpg" alt="js">
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="bg-dark">
+                <h2 class="title-prejects init-hidden">Projetos</h2>
+                <div class="my-projects">
+                    <div class="project init-hidden">
+                        <p>Em Construção</p>
+                    </div>
+                    <div class="project init-hidden">
+                        <p>Em Construção</p>
+                    </div>
+                    <div class="project init-hidden">
+                        <p>Em Construção</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="contacts">
+                <div class="div-contact">
+                    <div class="talk-to-me init-hidden">
+                        <h4 class="title-contact init-hidden">Contatos</h4>
+                        <p class="contact-cel">Cel. (<span class="whats">Whatsapp</span>):</p>
+                        <p class="contact-cel">(11) 98795-1398</p>
+
+                        <div class="social-networks init-hidden">
+                            <a class="networks-link" href="#">Linkedin</a>
+                            <a class="networks-link" href="#">facebook</a>
+                            <a class="networks-link" href="#">instagram</a>
+                        </div>
+
+                    </div>
+
+                    <div class="div-form init-hidden box-right">
+                        <h4 class="title-form">Envie uma mensagem</h4>
+                        <form class="form" action="https://formsubmit.co/8cde068fc5071234c9a2336ba1e090fd"
+                            method="POST">
+                            <p>
+                                <input id="name" type="text" placeholder="Nome:" required>
+                                <label for="name">Nome:</label>
+                            </p>
+
+                            <p>
+                                <input id="email" type="text" placeholder="E-mail:" required>
+                                <label for="email">E-mail:</label>
+                            </p>
+
+                            <p>
+                                <label for="message">Mensagem:</label>
+                                <textarea name="message" id="message" required></textarea>
+                            </p>
+                            <input type="hidden" name="_next" value="http://127.0.0.1:5500/thanks.html">
+                            <button id="submit" class="btn-submit" type="submit">Enviar</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            Feito por Evandro Macedo
+        </footer>
+        <a class="back-to-top" href="#">⮙</a>
+    </div>
+
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/scrollAnimation.js"></script>
+    <script src="assets/js/animatedBackground.js"></script>
+    <script src="assets/js/effectTyper.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,647 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo&family=Montserrat+Alternates&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400&family=Nunito:wght@200&display=swap');
+
+:root {
+    --color-green: #2BC244;
+    --color-green-dark: #000300;
+    --color-green-transparent: #2bc2445a;
+    --color-green-dark-transparent: #000300fa;
+
+    --color-white: #fff;
+    --color-black: #000;
+    --color-grey-light: #626464;
+
+    --color-blue: #267EEB;
+    --color-blue-dark: #0E2F57;
+    --color-blue-light: #75B3FF;
+    --color-blue-aqua: rgb(123, 198, 213);
+    --color-blue-medium: #1D63B8;
+    --color-blue-grey: rgb(35, 43, 54);
+    --color-blue-grey-2: rgb(47, 55, 68);
+    --color-blue-grey-light: rgb(61, 74, 92);
+    --color-blue-grey-transparent: rgba(35, 43, 54, 0.8);
+
+    --color-blue-facebook: rgb(17, 157, 248);
+    --color-blue-linkedin: rgb(40, 103, 178);
+    --color-gradient-instagram: linear-gradient(to bottom left, rgb(62, 27, 158), rgb(148, 28, 154), yellow);
+
+
+    --color-blue-css: rgb(55, 154, 214);
+    --color-orange-html: rgb(228, 77, 37);
+    --color-orange-html-transparent: rgba(228, 78, 37, .1);
+
+    --color-black-transparent-menu: rgba(0, 0, 0, 0.900);
+    --color-black-transparent: rgba(0, 0, 0, 0.600);
+    --color-almost-transparent: rgba(0, 0, 0, 0.200);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+}
+
+h2 {
+    font-size: 5rem;
+}
+
+h3 {
+    font-size: 4rem;
+}
+
+h4 {
+    font-size: 3rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#btn-mobile {
+    display: none;
+}
+
+/* Nome barra de navegação */
+.name {
+    font-size: 3rem;
+    color: var(--color-orange-html);
+    margin-left: 4rem;
+    font-weight: bold;
+}
+
+/* Cabeçalho, contém a logo e a barra de navegação */
+.cabecalho {
+    width: 100%;
+    height: 10rem;
+    background-color: transparent;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+    transition: .2s ease-in;
+}
+
+.cabecalho-2 {
+    background-color: var(--color-black-transparent-menu);
+    height: 7rem;
+}
+
+/* Barra de navegação */
+.nav-bar {
+    display: flex;
+    width: 50%;
+}
+
+/* Menu (ul) */
+.menu {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Links do menu (a) */
+.link-menu {
+    font-size: 2rem;
+    color: var(--color-black);
+    font-weight: bold;
+}
+
+.link-menu:hover {
+    color: var(--color-blue);
+}
+
+.link-menu-2 {
+    color: var(--color-orange-html);
+}
+
+/* Section Página inicial */
+.home-page {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-image: url(../img/man-1866784_1920.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.home-page::after {
+    content: '';
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.500) 100%);
+}
+
+/* Frase da página inicial */
+.ola {
+    font-size: 7rem;
+}
+
+.ola::after {
+    content: '|';
+    margin-left: .5rem;
+    opacity: 1;
+    animation: pisc .7s infinite;
+}
+
+@keyframes pisc {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Páginas com fundo escuro */
+.bg-dark {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-blue-grey);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Páginas com fundo claro */
+.bg-clear {
+    width: 100%;
+    min-height: 80vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--color-blue-grey);
+}
+
+.bg-clear::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+/* Títulos das páginas */
+.title-about,
+.title-prejects {
+    margin-top: 8rem;
+}
+
+.title-about,
+.title-prejects,
+.title-skill {
+    color: var(--color-blue);
+    border-radius: 0.5rem;
+    padding: 1rem;
+    z-index: 2;
+    background-image: linear-gradient(to top, var(--color-blue-grey), var(--color-almost-transparent));
+}
+
+/* Div sobre */
+.about-me {
+    max-width: 120rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* Div minha foto */
+.my-photo {
+    width: 30rem;
+    height: 35rem;
+    box-shadow: 0 0 .2rem .2rem var(--color-almost-transparent);
+    padding: 1rem;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+    margin-right: 2rem;
+}
+
+/* Foto */
+.photo {
+    background-image: url(../img/eu-c.jpg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    border-radius: .5rem;
+}
+
+/* Div Texto sobre mim */
+.text-about {
+    width: 40%;
+    box-shadow: 0.1rem 0.1rem 0.4rem;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: relative;
+}
+
+/* Texto sobre mim (p) */
+.text-about .text {
+    font-size: 1.7rem;
+    padding: 3rem;
+    font-family: 'Nunito' sans-serif;
+    font-weight: bold;
+}
+
+/* Minhas habilidades */
+.my-skills {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+    z-index: 1;
+}
+
+/* Imagens das minhas habilidades */
+.skill,
+.skill img {
+    width: 15rem;
+    height: 15rem;
+}
+
+.skill:nth-child(1) {
+    background-color: var(--color-orange-html);
+}
+
+.skill:nth-child(2) {
+    background-color: var(--color-blue-css);
+}
+
+/* Div dos meus projetos */
+.my-projects {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+/* Projetos */
+.project {
+    width: 45rem;
+    height: 20rem;
+    margin: .2rem;
+    background-color: var(--color-almost-transparent);
+    border: .1rem solid var(--color-black-transparent);
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.project p {
+    width: 50rem;
+    position: absolute;
+    left: -2rem;
+    font-size: 3rem;
+    color: rgb(238, 246, 0);
+    display: flex;
+    justify-content: center;
+    transform: rotate(-12deg);
+    background-color: var(--color-almost-transparent);
+}
+
+/* Section de contatos */
+.contacts {
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--color-blue-grey);
+    position: relative;
+}
+
+/* Div dos contatos */
+.div-contact {
+    max-width: 120rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-around;
+    overflow: hidden;
+    position: relative;
+}
+
+.div-contact::after {
+    content: 'Fale Comigo';
+    position: absolute;
+    font-size: 17rem;
+    color: var(--color-almost-transparent);
+    top: 7.5rem;
+}
+
+/* Div dos meus contatos */
+.talk-to-me {
+    padding: 3rem;
+    width: 40rem;
+    text-align: center;
+    box-shadow: 0.2rem 0 0.1rem var(--color-almost-transparent);
+    left: 0;
+    z-index: 1;
+}
+
+/* Título contato */
+.talk-to-me .title-contact {
+    text-align: center;
+    border: .1rem solid var(--color-almost-transparent);
+    border-top: none;
+    border-radius: 1rem;
+    color: var(--color-orange-html);
+    margin-bottom: 2rem;
+}
+
+/* Meus contatos */
+.talk-to-me .contact-cel {
+    color: var(--color-blue-light);
+    font-size: 2rem;
+    line-height: 1;
+}
+
+.talk-to-me .whats {
+    color: var(--color-green);
+    font-size: 2rem;
+}
+
+/* Div das redes sociais */
+.social-networks {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 2rem;
+    border: .1rem solid var(--color-almost-transparent);
+    border-radius: .5rem;
+    padding: 1rem;
+    z-index: 1;
+}
+
+/* Links das redes sociais */
+.social-networks .networks-link {
+    color: var(--color-black);
+    border-radius: 0.7rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 0 1rem;
+    transition: .5s;
+}
+
+/* Quando passar o mouse sobre o link da rede social */
+.social-networks .networks-link:nth-child(1):hover {
+    /* linkedin */
+    background-color: var(--color-white);
+    color: rgb(40, 103, 178);
+}
+
+.social-networks .networks-link:nth-child(2):hover {
+    /* Facebook */
+    background-color: rgb(17, 157, 248);
+    color: var(--color-white);
+}
+
+.social-networks .networks-link:nth-child(3):hover {
+    /* instagram */
+    background-image: var(--color-gradient-instagram);
+    color: rgb(29, 29, 29);
+}
+
+/* Div do formulário */
+.div-form {
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -0.2rem 0 0.1rem var(--color-almost-transparent);
+    position: relative;
+    z-index: 1;
+}
+
+/* Formulário */
+.form {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+/* Título formulário */
+.div-form .title-form {
+    border: .1rem solid var(--color-almost-transparent);
+    border-top: none;
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--color-orange-html);
+    margin-top: 3rem;
+}
+
+.form p {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+/*  Inputs do formulário */
+.form input {
+    width: 35rem;
+    height: 3.5rem;
+    font-size: 1.6rem;
+    outline: 0;
+    border: none;
+    border-radius: .5rem;
+    padding: .2rem;
+    background-color: var(--color-blue-grey-light);
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+/* placehouder dos inputs */
+.form input::placeholder {
+    color: transparent;
+}
+
+/* Label dos inputs */
+.form label {
+    font-size: 1.7rem;
+    pointer-events: none;
+    position: absolute;
+    color: var(--color-blue-light);
+    transition: all .3s ease-out;
+    top: 0.7rem;
+    left: 0.5rem;
+}
+
+.form p:nth-child(3) label {
+    top: 0;
+}
+
+/* Animação do input */
+.form input:focus+label,
+.form input:not(:placeholder-shown)+label {
+    margin-top: -2.5rem;
+    color: var(--color-green);
+    font-size: 1.3rem;
+}
+
+/* Label da Mensagem */
+.form p:nth-child(3) label {
+    position: relative;
+    font-size: 1.7rem;
+}
+
+/* textarea do formulário */
+.form textarea {
+    width: 35rem;
+    height: 10rem;
+    font-size: 1.6rem;
+    outline: 0;
+    border: none;
+    border-radius: .5rem;
+    padding: .2rem;
+    background-color: var(--color-blue-grey-light);
+    font-family: 'Cairo', sans-serif;
+}
+
+/* Botão de enviar */
+.btn-submit {
+    width: 20rem;
+    height: 3.5rem;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    background-color: var(--color-blue-light);
+    color: var(--color-blue-grey);
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    transition: .5s;
+}
+
+/* Quando passar o mouse sobre o botão */
+.btn-submit:hover {
+    background-color: var(--color-blue-css);
+}
+
+/* Rodapé */
+.footer {
+    width: 100%;
+    height: 20rem;
+    background-color: var(--color-blue-grey);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    border-top: .1rem solid var(--color-blue-grey-2);
+}
+
+/* Seta para voltar á página inicial */
+.back-to-top {
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    width: 4rem;
+    height: 4rem;
+    font-size: 5rem;
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: .5s;
+    z-index: 10;
+}
+
+/* Quanto passa o mouse sobre o botão */
+.back-to-top:hover {
+    color: var(--color-green);
+    transform: rotateY(180deg);
+}
+
+
+
+/* ANIMAÇÕES */
+
+/* Class que vai ser adicionada a tag span para dar o efeito */
+.anima-b {
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    bottom: -1rem;
+    animation: up-rotate 5s infinite;
+    background-color: var(--color-white);
+}
+
+@keyframes up-rotate {
+    from {
+        opacity: 0;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(-80rem) rotate(360deg);
+    }
+}
+
+/* Animação Scroll */
+.init-hidden {
+    opacity: 0;
+    transition: 1.3s linear;
+}
+
+.init-hidden-off {
+    opacity: 1;
+}
+
+.box-right {
+    right: -5rem;
+    transition: 1s cubic-bezier(0.03, 0.95, 0.72, 0.88);
+}
+
+.box-right-off {
+    right: 0;
+}
