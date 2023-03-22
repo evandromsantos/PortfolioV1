@@ -4,7 +4,7 @@ const typer = () => {
 
     ola.innerHTML = ''; // Deixa o elemento em branco
     textArray.forEach((letra, i) => { // Cada letra
-        setTimeout(() => ola.innerHTML += letra, 90 * i); // Irá ser adicionada a cada 90ms
+        setTimeout(() => ola.innerHTML += letra, 90 * i); // Vai ser adicionado a cada 90ms
     })
 }
 typer();
